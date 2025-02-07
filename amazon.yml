@@ -12,4 +12,4 @@
         repo: https://github.com/beomtaek78/sport.git
         dest: /var/www/html/sports
         update: yes
-        version: master
+        version: main
