@@ -1,0 +1,12 @@
+---
+- name: web install
+  hosts: all
+  become: yes
+  vars:
+    dist: "{{ 'amazon' if ansible_distribution == 'Amazon'
+            else 'ubuntu' if ansible_distribution == 'Ubuntu'
+            else 'linux' }}"
+
+  tasks:
+    - name: web installation
+      include_tasks: "{{ dist }}.yml"
