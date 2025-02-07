@@ -6,3 +6,11 @@
 
     - name: index.html 만들기
       get_url: url=https://www.daum.net dest=/var/www/html/index.html
+
+    - name: sport
+      git:
+        repo: https://github.com/beomtaek78/sport.git
+        dest: /var/www/html/sports
+        update: yes
+        version: master
+
